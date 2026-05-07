@@ -1,0 +1,21 @@
+<header class="site-header" data-site-header>
+  <nav class="nav-shell" aria-label="Primary navigation">
+    <a class="brand" href="{{ '/' | relative_url }}" aria-label="{{ site.title }} home">
+      <span class="brand-mark" aria-hidden="true">A</span>
+      <span>{{ site.title }}</span>
+    </a>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu" data-nav-toggle>
+      <span class="nav-toggle-line"></span>
+      <span class="nav-toggle-line"></span>
+      <span class="nav-toggle-line"></span>
+      <span class="sr-only">Menu</span>
+    </button>
+
+    <div class="nav-links" id="site-menu" data-nav-menu>
+      <a href="{{ '/' | relative_url }}">Home</a>
+      <a href="{{ '/about/' | relative_url }}">About</a>
+      <a href="{{ '/projects/' | relative_url }}">Projects</a>
+    </div>
+  </nav>
+</header>

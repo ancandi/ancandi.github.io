@@ -1,37 +1,50 @@
 ---
-layout: default
 title: Home
 ---
 
-<div class="posts">
-  {% for post in paginator.posts %}
-  <div class="post">
-    <h1 class="post-title">
-      <a href="{{ post.url }}">
-        {{ post.title }}
-      </a>
-    </h1>
-
-    <span class="post-date">{{ post.date | date_to_string }}</span>
-
-    {{ post.content }}
+<section class="hero-section">
+  <div class="hero-copy">
+    <p class="eyebrow">GitHub Pages + Jekyll</p>
+    <h1>A fluid home for Roblox ideas, projects, and notes.</h1>
+    <p class="lede">Ancandi's homepage is set up to feel clean on phones, tablets, and wide screens without fragile fixed widths.</p>
+    <div class="hero-actions">
+      <a class="button primary" href="{{ '/projects/' | relative_url }}">View Projects</a>
+      <a class="button secondary" href="{{ '/about/' | relative_url }}">About Ancandi</a>
+    </div>
   </div>
-  {% endfor %}
-</div>
+  <div class="hero-panel" aria-label="Site readiness summary">
+    <div>
+      <span class="stat-value">Jekyll</span>
+      <span class="stat-label">GitHub Pages ready</span>
+    </div>
+    <div>
+      <span class="stat-value">Fluid</span>
+      <span class="stat-label">Responsive layout</span>
+    </div>
+    <div>
+      <span class="stat-value">Fast</span>
+      <span class="stat-label">Static, simple, accessible</span>
+    </div>
+  </div>
+</section>
 
-<div class="pagination">
-  {% if paginator.next_page %}
-    <a class="pagination-item older" href="{{ site.baseurl }}page{{paginator.next_page}}">Older</a>
-  {% else %}
-    <span class="pagination-item older">Older</span>
-  {% endif %}
-  {% if paginator.previous_page %}
-    {% if paginator.page == 2 %}
-      <a class="pagination-item newer" href="{{ site.baseurl }}">Newer</a>
-    {% else %}
-      <a class="pagination-item newer" href="{{ site.baseurl }}page{{paginator.previous_page}}">Newer</a>
-    {% endif %}
-  {% else %}
-    <span class="pagination-item newer">Newer</span>
-  {% endif %}
-</div>
+<section class="content-band">
+  <div class="section-heading">
+    <p class="eyebrow">Ready to use</p>
+    <h2>Everything needed for a working Pages site.</h2>
+  </div>
+  <div class="feature-grid">
+    <article class="feature-card">
+      <h3>Jekyll structure</h3>
+      <p>Shared layouts and includes keep pages consistent while staying easy to edit.</p>
+    </article>
+    <article class="feature-card">
+      <h3>Responsive styling</h3>
+      <p>CSS uses fluid spacing, flexible grids, and accessible contrast from the start.</p>
+    </article>
+    <article class="feature-card">
+      <h3>GitHub Pages config</h3>
+      <p>The config and Gemfile match the Pages-supported Jekyll environment.</p>
+    </article>
+  </div>
+</section>
