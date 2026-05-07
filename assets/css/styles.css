@@ -1,15 +1,21 @@
 :root {
-  color-scheme: light;
-  --bg: #f7f3ec;
-  --surface: #fffaf2;
+  color-scheme: light dark;
+  --bg: #f5fbff;
+  --surface: #eef8ff;
   --surface-strong: #ffffff;
-  --text: #1f2933;
-  --muted: #65717d;
-  --line: rgba(31, 41, 51, 0.12);
-  --accent: #0f766e;
-  --accent-strong: #0b5f59;
-  --coral: #d86f45;
-  --shadow: 0 24px 60px rgba(31, 41, 51, 0.12);
+  --surface-panel: rgba(255, 255, 255, 0.84);
+  --surface-card: rgba(255, 255, 255, 0.72);
+  --text: #082033;
+  --muted: #526879;
+  --line: rgba(8, 32, 51, 0.14);
+  --accent: #02b3ff;
+  --accent-strong: #006f9f;
+  --accent-soft: rgba(2, 179, 255, 0.16);
+  --accent-ink: #03131d;
+  --secondary: #7c3aed;
+  --secondary-soft: rgba(124, 58, 237, 0.12);
+  --header-bg: rgba(245, 251, 255, 0.84);
+  --shadow: 0 24px 60px rgba(8, 32, 51, 0.12);
   --step--1: clamp(0.88rem, 0.84rem + 0.16vw, 0.98rem);
   --step-0: clamp(1rem, 0.94rem + 0.28vw, 1.16rem);
   --step-1: clamp(1.22rem, 1.08rem + 0.64vw, 1.58rem);
@@ -21,6 +27,25 @@
   --space-lg: clamp(2rem, 1.45rem + 2.4vw, 3.4rem);
   --space-xl: clamp(3rem, 2.1rem + 4vw, 5.4rem);
   --content: min(1120px, calc(100% - clamp(2rem, 6vw, 5rem)));
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #06111d;
+    --surface: #0d1c2b;
+    --surface-strong: #13283c;
+    --surface-panel: rgba(13, 28, 43, 0.86);
+    --surface-card: rgba(19, 40, 60, 0.74);
+    --text: #eaf8ff;
+    --muted: #9ab4c6;
+    --line: rgba(234, 248, 255, 0.14);
+    --accent-strong: #7edbff;
+    --accent-soft: rgba(2, 179, 255, 0.18);
+    --secondary: #a78bfa;
+    --secondary-soft: rgba(167, 139, 250, 0.16);
+    --header-bg: rgba(6, 17, 29, 0.84);
+    --shadow: 0 24px 60px rgba(0, 0, 0, 0.36);
+  }
 }
 
 * {
@@ -35,8 +60,8 @@ body {
   margin: 0;
   min-height: 100vh;
   background:
-    linear-gradient(135deg, rgba(15, 118, 110, 0.1), transparent 36rem),
-    linear-gradient(225deg, rgba(216, 111, 69, 0.12), transparent 32rem),
+    linear-gradient(135deg, var(--accent-soft), transparent 36rem),
+    linear-gradient(225deg, var(--secondary-soft), transparent 32rem),
     var(--bg);
   color: var(--text);
   font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -63,7 +88,7 @@ svg {
   z-index: 20;
   transform: translateY(-150%);
   background: var(--text);
-  color: #fff;
+  color: var(--bg);
   padding: 0.6rem 0.8rem;
   border-radius: 0.45rem;
 }
@@ -77,7 +102,7 @@ svg {
   top: 0;
   z-index: 10;
   backdrop-filter: blur(18px);
-  background: rgba(247, 243, 236, 0.82);
+  background: var(--header-bg);
   border-bottom: 1px solid var(--line);
 }
 
@@ -120,7 +145,7 @@ svg {
   place-items: center;
   border-radius: 0.55rem;
   background: var(--accent);
-  color: #fff;
+  color: var(--accent-ink);
 }
 
 .nav-links {
@@ -183,7 +208,7 @@ svg {
 
 .eyebrow {
   margin: 0 0 var(--space-xs);
-  color: var(--coral);
+  color: var(--secondary);
   font-size: 0.78rem;
   font-weight: 750;
   letter-spacing: 0.08em;
@@ -244,12 +269,12 @@ h3 {
 
 .button.primary {
   background: var(--accent);
-  color: #fff;
+  color: var(--accent-ink);
 }
 
 .button.secondary {
   border-color: var(--line);
-  background: rgba(255, 255, 255, 0.58);
+  background: var(--surface-panel);
   color: var(--text);
 }
 
@@ -259,7 +284,7 @@ h3 {
   padding: var(--space-md);
   border: 1px solid var(--line);
   border-radius: 0.5rem;
-  background: rgba(255, 250, 242, 0.8);
+  background: var(--surface-panel);
   box-shadow: var(--shadow);
 }
 
@@ -301,7 +326,7 @@ h3 {
 .project-item {
   border: 1px solid var(--line);
   border-radius: 0.5rem;
-  background: rgba(255, 255, 255, 0.62);
+  background: var(--surface-card);
 }
 
 .feature-card {
