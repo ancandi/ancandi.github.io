@@ -1,4 +1,4 @@
-# Ancandi GitHub Pages
+# ancandi's homepage
 
 This repository is a Jekyll site ready for GitHub Pages.
 
