@@ -2,7 +2,7 @@
 
 This repository is a Jekyll site ready for GitHub Pages.
 
-Last redeploy trigger: 2026-05-07 23:14 Asia/Taipei.
+Last redeploy trigger: 2026-05-07 after latest homepage updates.
 
 ## Local preview
 
