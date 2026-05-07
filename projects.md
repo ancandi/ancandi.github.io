@@ -15,7 +15,7 @@ permalink: /projects/
         <h2>Roblox practice</h2>
         <p>A place to collect scripts, builds, experiments, and lessons learned.</p>
       </div>
-      <a href="https://github.com/ancandi/ancandi.github.io">Repository</a>
+      <a href="https://github.com/ancandi">Repository</a>
     </article>
     <article class="project-item">
       <div>
