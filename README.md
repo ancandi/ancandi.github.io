@@ -2,6 +2,8 @@
 
 This repository is a Jekyll site ready for GitHub Pages.
 
+Last redeploy trigger: 2026-05-07 23:14 Asia/Taipei.
+
 ## Local preview
 
 ```bash
